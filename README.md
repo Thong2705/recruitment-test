@@ -1,6 +1,10 @@
 # Recruitment Test
 **USAGE**
 
+**_Install the required Python libraries_**
+
+	pip install pandas
+
 **_Run the script test.py_**
 
 	python test.py
