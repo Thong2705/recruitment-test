@@ -20,10 +20,10 @@ def get_csv_dimensions(file_path):
 def display_specific_columns(input_file, output_file):
     df = pd.read_csv(input_file)
     
-    # Tạo một bản sao của DataFrame để tránh sửa đổi dữ liệu gốc
+    # Create a copy of the DataFrame to avoid modifying the original data
     modified_df = df.copy()
     
-    # Chuyển tên cột thành chữ viết thường và thay khoảng trắng bằng dấu _
+    # Convert column names to lowercase and replace spaces with _
     modified_df.columns = modified_df.columns.str.lower().str.replace(' ', '_')
     
     selected_columns = modified_df[['index', 'customer_id', 'first_name', 'last_name', 'phone_1']]
