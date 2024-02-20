@@ -2,7 +2,7 @@ import zipfile
 import pandas as pd
 
 def download_and_extract_data(url, destination):
-    """Download and extract data from the given URL."""
+    # Download and extract data from the given URL
     import requests
 
     response = requests.get(url)
@@ -13,7 +13,7 @@ def download_and_extract_data(url, destination):
         zip_ref.extractall('data')
 
 def get_csv_dimensions(file_path):
-    """Get the number of rows and columns of the CSV file."""
+    # Get the number of rows and columns of the CSV file
     df = pd.read_csv(file_path)
     return df.shape
 
